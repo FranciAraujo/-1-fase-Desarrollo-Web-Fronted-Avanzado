@@ -1,0 +1,93 @@
+// Fase 1: Definir el Problema
+
+// Calcular el área de un círculo dado su radio en metros. 
+//Aplicar la metodología para construir un 
+//algoritmo que calcule el área de un círculo dado su radio en metros. 
+//El área se calcula con la fórmula A = pi * R², donde el valor de pi es 3.14. 
+//Una vez completados estos pasos, proceder a 
+//codificar en JavaScript el algoritmo. 
+
+ //Fase 2. Analizar el problema
+// Objetivo: Calcular el área de un círculo en centímetros cuadrados.
+// Hay una restricion: El radio no puede ser negativo ni igual a cero.
+//debe ser mayor que cero. La medida resultante del área se debe expresar en centímetros cuadrados (cm²).  
+   
+    
+//Fase 3. Diseñar el algoritmo
+   //Paso 1.
+    //Pedir al usuario que ponga la medida del radio en metros.
+    //Usuario que ingresa la medida del radio en metros y se almacena en la variable radioEnMetros. La función parseFloat se utiliza para convertir la //entrada del usuario a un número decimal.
+    
+let radioEnMetros = parseFloat(prompt("Ingrese el radio del círculo en metros:")); //parseFloat para convertir esa entrada a un número decimal (radioEnMetros). Esto es para tener el valor del radio en metros y permitir los cálculos.//prompt para obtener una entrada del usuario,  
+
+// Paso 2: Verificar si el radio es mayor que cero y pasar a paso 3, si no lo es pues hay que ir paso 6
+
+    if (radioEnMetros > 0) { //Se utiliza un if para verificar si el radio ingresado es mayor que cero. Esto garantiza que el radio cumpla con la restricción de ser positivo.
+
+    // Paso 3: Calcular el área del círculo usando la fórmula A = pi * radio^2. donde pi es:
+    const PI = 3.14;
+
+    const areaEnMetrosCuadrados = PI * Math.pow(radioEnMetros, 2); //Se utiliza una constante PI para almacenar el valor de pi (aproximadamente 3.14). Luego, se calcula el área en metros cuadrados usando la fórmula especificada.
+
+    // Paso 4: Convertir el área a centímetros cuadrados (1 metro cuadrado = 10,000 cm cuadrados). //Se multiplica el área en metros cuadrados por 10,000 para convertirla a centímetros cuadrados, ya que 1 metro cuadrado equivale a 10,000 centímetros cuadrados.
+    const areaEnCentimetrosCuadrados = areaEnMetrosCuadrados * 10000; //Se multiplica el área en metros cuadrados por 10,000 para convertirlo a centímetros cuadrados, ya que 1 metro cuadrado equivale a 10.000 centímetros cuadrados.
+
+    // Paso 5: Mostrar el resultado en centímetros cuadrados en consola.
+    console.log(`El área del círculo es: ${areaEnCentimetrosCuadrados} cm²`); //Se utiliza console.log para mostrar el resultado en la consola del navegador
+
+} else {
+
+    // Paso 6: //Si el radio no es mayor que cero, se muestra un mensaje de error en la consola
+    console.log("Error: El radio debe ser mayor que cero.");
+
+}
+
+//resumiendo todo: 
+
+//Se utiliza prompt y parseFloat para obtener y convertir la entrada del usuario a un número decimal.
+//Se utiliza un if para verificar si el radio es mayor que cero y tomar decisiones en consecuencia.
+//Se utiliza una constante PI para almacenar el valor de π.
+//Se realizan cálculos según la fórmula del área del círculo.
+//Se utiliza console.log para mostrar resultados y mensajes en la consola.
+//Cálculo del área de un círculo con la fórmula para calcular el área de un círculo es:
+ 
+//A = pi * radio^2
+
+//donde:
+
+//A es el área del círculo,
+//pi es el valor de Pi (aproximadamente 3.14),
+//r es el radio del círculo, y 2 al cuadrado.
+
+// En el paso 3: Calcular el área del círculo usando la fórmula A = pi * radio^2.
+//const PI = 3.14;
+//const areaEnMetrosCuadrados = PI * Math.pow(radioEnMetros, 2);
+//En este paso, se define la constante PI con el valor de Pi. Luego, se calcula el área en metros cuadrados utilizando la fórmula A = pi * radio^2
+//y se almacena en la variable areaEnMetrosCuadrados. 
+//pi: La constante PI se establece en 3.14 para aproximarse al valor de Pi.
+
+//radioEnMetros2 (cuadrados): Se eleva el radio al cuadrado utilizando Math.pow(radioEnMetros, 2). Esto es equivalente a 
+//radioEnMetros * radioEnMetros
+
+//3.A=pi*⋅radioEnMetros2: Se multiplica el resultado anterior por el valor de Pi para obtener el área en metros cuadrados.
+
+//Entonces, el resultado, almacenado en areaEnMetrosCuadrados, es el área del círculo en metros cuadrados.
+
+//Calculo multiplicar el 10.000
+//La parte del código que multiplica el área en metros cuadrados por 10.000 está destinada a convertir el área de metros cuadrados a centímetros cuadrados. 
+
+// Paso 4: Convertir el área a centímetros cuadrados (1 metro cuadrado = 10,000 cm cuadrados).
+
+//const areaEnCentimetrosCuadrados = areaEnMetrosCuadrados * 10000;
+
+//Esta línea de código toma el área calculada en metros cuadrados (areaEnMetrosCuadrados) y la multiplica por 10,000. La razón es la siguiente:
+
+//Conversión de Unidades: 1 metro cuadrado es igual a 10,000 centímetros cuadrados. Entonces, para convertir el área de metros cuadrados a centímetros cuadrados, se multiplica por 10,000.
+//En términos matemáticos, si tienes el área en metros cuadrados(Am2)a metros cuadrados.
+//la formula para convertir a centimetros cuadrados (Am2) seria: 
+
+//Acm2= Am2 * 10000
+
+//Portanto, la línea de código está realizando esta conversión para asegurarse de que el resultado final (areaEnCentimetrosCuadrados) esté expresado en //centímetros cuadrados.
+
+

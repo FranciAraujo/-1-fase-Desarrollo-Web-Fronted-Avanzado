@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+    <xsl:output method="html" doctype-public="XSLT-compat" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
+
+    <xsl:template match="/">
+    
+        <peliculas>
+            
+            <xsl:for-each select="peliculas/pelicula">
+                <xsl:sort select="imdb" order="ascending"/>
+                <xsl:if test="count(directores/director) = 2">
+                
+                    <pelicula estrenada="{@estrenada}" id="{@id}">
+                
+                    <nombre pais="{pais}">
+                        
+                        <xsl:value-of select="nombre/text()"/>
+                        <imdb idioma="{nombre/@idioma}" taquilla="{taquilla/text()}">
+                            
+                            <xsl:value-of select="imdb"/>
+                        </imdb>
+                        
+                    </nombre>
+                    <directores>
+                        
+                        <xsl:for-each select="directores/director">
+                            <xsl:variable name="idDirector" select="@id"></xsl:variable>
+                        
+                            <xsl:for-each select="/peliculas/directores/director">
+                            
+                                <xsl:if test="@id=$idDirector">
+                                    
+                                    <director id="{@id}" genero="{nombre/@genero}">
+                                        
+                                        <xsl:value-of select="concat(nombre/text(), ' (', edad/text(), ')')"/>
+                                        
+                                    </director>
+                                    
+                                </xsl:if>
+                                
+                            </xsl:for-each>
+                        </xsl:for-each>
+                        
+                        
+                    </directores>
+                    <reparto>
+                    
+                        <xsl:for-each select="reparto/actor">
+                            <xsl:variable name="idActor" select="@id"/>
+                            <xsl:for-each select="/peliculas/actores/actor">
+                                
+                                <xsl:if test="@id=$idActor">
+                                    
+                                    <xsl:choose>
+                                        
+                                        <xsl:when test="nombre/@genero='hombre'">
+                                            <actor id="{@id}" genero="mujer">
+                                        
+                                                <xsl:value-of select="concat(nombre/text(), ' (', edad/text(), ')')"/>
+                                            </actor>
+                                            
+                                        </xsl:when>
+                                        <xsl:when test="nombre/@genero='mujer'">
+                                            <actor id="{@id}" genero="hombre">
+                                        
+                                                <xsl:value-of select="concat(nombre/text(), ' (', edad/text(), ')')"/>
+                                            </actor>
+                                            
+                                        </xsl:when>
+                                        
+                                    </xsl:choose>
+                                    
+                                    
+                                    <actor id="{@id}" genero="{nombre/@genero}">
+                                        
+                                        <xsl:value-of select="concat(nombre/text(), ' (', edad/text(), ')')"/>
+                                    </actor>
+                                </xsl:if>
+                                
+                            </xsl:for-each>
+                            
+                        </xsl:for-each>
+                        
+                    </reparto>
+                    
+                </pelicula>
+                    
+                </xsl:if>
+                
+            </xsl:for-each>
+            
+        </peliculas>
+    
+    </xsl:template>
+
+</xsl:transform>

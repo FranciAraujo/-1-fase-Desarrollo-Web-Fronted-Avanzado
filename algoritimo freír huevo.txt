@@ -1,0 +1,60 @@
+1. Buscar  sartén
+ 
+2. Ir a la cocina y a la vitro ceramica
+ 
+3. encender la vitro
+ 
+4. Poner la sartén sobre la vitro para que se caliente.
+ 
+5. Dentro de la  sartén poner una cucharada de aceite.
+ 
+6. coger el  huevo y romperlo
+ 
+7. Cuando el aceite este caliente, romper el huevo en el borde de la sartén
+ 
+8. Con cuidado abrir el huevo y vaciarlo dentro del sartén sin romper la yema.
+ 
+9. Bajar el fuego a fuego medio.
+ 
+10. Esperar aproximadamente 5 minutos o hasta que el huevo este a como te guste
+ 
+11. Sacar el huevo de la sartén y ponerlo sobre un plato
+ 
+12. Esparcir sal al gusto sobre el huevo.
+ 
+13. Apagar el fogón de la cocina
+ 
+14. Poner el sartén donde se frito el huevo en el lavaplatos.
+ 
+15. Comer el huevo frito.
+-------------------------------------------------------------------------
+Diagrama de flujo: 
+
+1 Inicio
+2 Buscar sartén
+ ¿Encontraste la sartén?
+Sí -> Ir al paso 3.
+No -> ir al paso 2.
+3 Ir a la cocina y a la vitrocerámica
+4 Encender la vitrocerámica
+5 Poner la sartén sobre la vitro para que se caliente
+6 Dentro de la sartén poner una cucharada de aceite
+7 Coger el huevo y romperlo
+8 Cuando el aceite esté caliente, romper el huevo en el borde de la sartén
+9 Con cuidado abrir el huevo y vaciarlo dentro de la sartén sin romper la yema
+10 Bajar el fuego a fuego medio
+11 Esperar aproximadamente 5 minutos o hasta que el huevo esté a tu gusto
+¿El huevo está listo?
+Sí -> Ir al paso 12.
+No -> Continuar esperando.
+12 Sacar el huevo de la sartén y ponerlo sobre un plato
+13 Esparcir sal al gusto sobre el huevo
+14 Apagar el fogón de la cocina
+15 Poner el sartén donde se frió el huevo en el lavaplatos
+16 Comer el huevo frito
+17 Fin
+
+
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dividir dos números enteros</title>
+</head>
+<body>
+  <script>
+    // Fase 1. Definición del problema
+   //Aplicar la metodología para construir un algoritmo que haga:
+  //dividir dos números enteros y mostrar su resultado. Tenga en
+  //cuenta que no se puede dividir entre cero (0) y valores menores
+ //que (0) 
+
+    // Dividir dos números enteros y mostrar su resultado.
+    // Tener en cuenta que no se puede dividir entre cero (0) y valores menores que (0).
+    // Una vez hecho lo anterior, codificar en JavaScript.
+
+    // Fase 2. Analizar el problema
+    // Tengo que dividir dos números enteros y mostrar el resultado, evitando divisiones entre cero y valores menores que cero.
+
+    // Fase 3. Diseñar el algoritmo
+    // Paso 1. Pedir al usuario que ingrese el dividendo (número a dividir):
+
+    let dividendo = parseInt(prompt("Ingrese el dividendo (número a dividir)"));
+
+    // Paso 2. Pedir al usuario que ingrese el divisor (número por el cual dividir):
+
+    let divisor = parseInt(prompt("Ingrese el divisor (número por el cual dividir)"));
+
+    // Paso 3. Verificar que el divisor no sea cero ni un valor menor que //cero.
+
+    if (divisor !== 0 && divisor > 0) {
+
+      // Paso 4. Necesito otra variable que se va a llamar resultado.
+
+      let resultado;
+
+      // Paso 5. Pongo resultado para que esta variable sea la encargada //de realizar la división.
+
+      resultado = dividendo / divisor;
+
+      // Paso 6. Digo que nos muestre un mensaje en la pantalla y lo //concateno con la variable resultado.
+
+      document.write(`${dividendo} / ${divisor} = ${resultado}`);
+    } else {
+
+      // Paso 7. Muestro un mensaje en caso de que el divisor sea cero o menor que cero.
+
+      document.write("No es posible dividir entre cero o por valores menores que cero.");
+    }
+
+    // Paso 8. Guardo el código y lo pruebo en el escritorio.
+
+  </script>
+</body>
+</html>

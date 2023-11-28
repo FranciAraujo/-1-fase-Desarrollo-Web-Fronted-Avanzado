@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumar dos números enteros</title>
+</head>
+<body>
+  <script>
+    // Fase 1. Definición del problema
+    // Sumar dos números enteros y mostrar su resultado.
+    // A la hora de probar la suma, deben dar resultados como:
+    // 5 + 3 = 8
+    // 2 + 7 = 9
+    // -4 + 2 = -2
+    // Una vez hecho lo anterior, codificar en JavaScript.
+
+    // Función para sumar, maneja sumas con números negativos
+    function sumar(valor1, valor2) {
+        return valor1 + valor2;
+    }
+
+    // Función para restar, maneja restas con números negativos
+    function restar(valor1, valor2) {
+        return valor1 - valor2;
+    }
+
+    function calcular(operador, valor1, valor2) {
+        // Variable para almacenar el resultado de la operación
+        var resultado;
+
+        // Utiliza un switch para determinar qué operación realizar según el operador proporcionado
+        switch (operador) {
+            // Caso de suma
+            case '+':
+                resultado = sumar(valor1, valor2);
+                break;
+            
+            case '-':
+                if (valor1 >= 0 && valor2 >=0){
+                    resultado = restar(valor1,  valor2);
+                } else {
+                    resultado= sumar(valor1, valor2);
+                }
+                break;
+            // Caso por defecto para operadores no reconocidos
+            default:
+                resultado = "Operador no válido";
+        }
+
+        alert("El resultado es: " + resultado);
+    }
+
+    // Llamadas a la función calcular con diferentes valores
+    calcular('+', 5, 3);
+    calcular('-', 2, -7);
+    calcular('-', -4, -2);
+    calcular('+', -8, 2);
+  </script>
+</body>
+</html>

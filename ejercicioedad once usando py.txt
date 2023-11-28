@@ -1,0 +1,19 @@
+""""utiliza la función isdigit() para verificar si la entrada consiste en dígitos, y luego va verificar si el número es positivo antes de realizar la clasificación de la categoría. 
+
+def clasificar_categoria(edad):
+    if edad.isdigit() and int(edad) >= 0:
+        edad = int(edad)
+        if edad < 12:
+            return "Niño"
+        elif edad < 18:
+            return "Adolescente"
+        elif edad < 65:
+            return "Adulto"
+        else:
+            return "Adulto Mayor"
+    else:
+        return "Error: Ingresa un valor numérico positivo para la edad."
+
+edad = input("Ingresa tu edad: ")
+categoria = clasificar_categoria(edad)
+print(f"Tu categoría es: {categoria}")

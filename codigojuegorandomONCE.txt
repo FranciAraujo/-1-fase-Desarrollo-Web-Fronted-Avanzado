@@ -1,0 +1,67 @@
+//Aplicar la metodología para construir un algoritmo que haga:
+//Un juego en el que el programa selecciona un número aleatorio y
+//el jugador debe adivinarlo mediante pistas de "mayor" o "menor"
+//hasta que acierte. Los números aleatorios se generan entre el 0 y
+//el 100
+//Una vez hecho lo anterior, codificar en javascript su algoritmo.
+
+//Programa selecciona un número aleatorio
+//jugador debe adivinarlo mediante pistas de si es mayor o menor,
+//hasta q acierte.
+//El problema consiste en crear un juego en el que el programa selecciona un número aleatorio entre 0 y 100, y el jugador debe adivinar ese número. El programa proporcionará pistas de "mayor" o "menor" según la suposición del jugador, hasta que el jugador adivine correctamente 
+
+//Fase 2: Analisar el problema p/ diseñar el algoritimo
+//generar número aleatorio entre 0 y 100
+//jugador debe adivinar ese número
+//debemos darle pistas y inicializar variables 
+
+//Paso 1: Inicialización
+//Generar un número aleatorio entre 0 y 100 que el jugador debe adivinarlo
+//Inicializar variables para el número aleatorio y un contador de intentos.
+
+//Paso 2: Bucle del Juego
+//Jugador debe ingresar un número. 
+
+//Luego se inicia un bucle que continuará hasta que el jugador adivine correctamente.
+//Solicitar al jugador que digite un número.
+//Se verifica si el número ingresado por el jugador es igual al número aleatorio.
+//Si es igual, mostra un mensaje de felicidades y el número de intentos.
+//Si no es igual, dar pistas de "mayor" o "menor" y aumentar el contador de intentos.
+//--> Se puede utilizar un bucle while para permitir al usuario intentar adivinar el número tantas veces como sea necesario. El va proporcionar pistas de "mayor" o "menor" según la comparación con el número aleatorio, y finalizará cuando el usuario adivina correctamente este número.
+
+//Fase 3: Implementación en JavaScript
+
+// Paso 1: Inicialización
+
+const numeroAleatorio = Math.floor(Math.random() * 101); // Número aleatorio entre 0 y 100 //Aquí se genera un número aleatorio entre 0 y 100 utilizando Math.random(). Multiplicamos el resultado por 101 y redondeamos hacia abajo con Math.floor() para tener un número entre 0 y 100.
+let intentos = 0; //Aqui se inicializa una variable intentos que llevará la cuenta de cuántos intentos ha realizado el jugador.
+
+// Paso 2: Bucle del Juego
+while (true) { // inicia un bucle que continuará hasta que se ejecute un break. En este caso, el bucle seguirá ejecutándose hasta que el jugador adivine el número.
+  // Solicitar al jugador que ingrese un número
+  const intentoUsuario = prompt("Adivina el número (entre 0 y 100):"); //Solicita al usuario que ingrese un número a través de un cuadro de diálogo. El valor ingresado se almacena en la variable intentoUsuario.
+
+  const numeroUsuario = parseInt(intentoUsuario); //Convierte la entrada del usuario (que es una cadena) en un número entero usando parseInt() y lo almacena en la variable numeroUsuario.
+
+  // Verificar si el número es igual al número aleatorio
+  if (numeroUsuario === numeroAleatorio) {  //Compara el número ingresado por el usuario con el número aleatorio generado. Si son iguales, el jugador ha adivinado correctamente y se muestra un mensaje de felicitaciones junto con el número de intentos. 
+    intentos++; //Se incrementa el contador de intentos.
+    alert(`¡Felicidades! Adivinaste el número en ${intentos} intentos.`);  
+    break; // Salir del bucle
+  } else if (numeroUsuario < numeroAleatorio) {  //Si el número del usuario es menor que el número aleatorio, se le da una pista de que el número es mayor y 
+    // Dar pista de "mayor"
+    intentos++;  //se incrementa el contador de intentos.
+    alert("El número es mayor. Intenta de nuevo.");
+  } else {  //Si no es igual ni menor, significa que el número del usuario es mayor, por lo que se le da una pista de que el número es menor  
+    // Dar pista de "menor"
+    intentos++;  //y se incrementa el contador de intentos.
+    alert("El número es menor. Intenta de nuevo.");
+  }
+}
+//Fase 4: Prueba y depurar si hace falta
+//Ejecuta el código para ingresar numeros para adivinar. 
+//Luego vemos si el programa proporciona pistas correctas y termina cuando el jugador adivina dicho número.
+//Realizaremos ajustes si es necesario y depuramos cualquier error encontrado durante las pruebas.
+
+
+

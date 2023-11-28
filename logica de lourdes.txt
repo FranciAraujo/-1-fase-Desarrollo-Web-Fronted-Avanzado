@@ -1,0 +1,52 @@
+//Fase 1. Definición del problema
+    //Calcular el área de un cículo.
+    //El radio tiene que estar en metros. 
+    //El área tiene que ser mayor que 0. 
+
+
+//Fase 2. Analizar el problema
+    //Tenemos que calcular el área de un cículo. Formula: A=TT R2 
+    //El cículo no puede tener números negativos ni datos con valor 0
+
+
+//Fase 3. Diseñar el algoritmo
+    //Paso 1.
+    //Pedir al usuario que ponga la medida del radio en metros.
+
+    //Paso 2.
+    //Verificar si el valor introducido es mayor a 0 y pasar a paso 3, si NO paso 6
+
+    //Paso 3.
+    //Calcular el área del triángulo con la fórmula: Pi * radio2
+
+    //Paso 4. 
+    //Pasar los metros a centímetros multiplicando por 10000
+
+    //Paso 5
+    //Mostrar resultado en cm2. 
+
+    //Paso 6.
+    //Mostrar un mensaje de error si el radio no tiene una medida correcta
+
+
+
+    // Fase 4. Prueba de escritorio
+    // Paso 1.
+    let radio = parseFloat(prompt("Indique el radio del círculo en metros: ")); // Utilizo parseFloat por si la medida contiene decimales
+
+    // Paso 2.
+    if (radio > 0) {
+
+    // Paso 3.
+    let areaEnMetrosCuadrados = Math.PI * Math.pow(radio, 2);
+
+    // Paso 4.
+    let areaEnCentimetrosCuadrados = areaEnMetrosCuadrados * 10000; // 1 metro cuadrado = 10,000 cm cuadrados
+
+    // Paso 5.
+    alert("El área del círculo es: " + areaEnCentimetrosCuadrados + " cm²");
+
+    //Paso 6
+    } else {
+      alert("Error: El radio debe ser mayor que 0.");
+    }

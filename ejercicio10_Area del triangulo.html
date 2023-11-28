@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular el área de un triángulo</title>
+</head>
+<body>
+  <script>
+    // Fase 1. Definición del problema
+    // Calcular el área de un triángulo y mostrar su resultado.
+    // Una vez hecho lo anterior, codificar en JavaScript.
+
+    // Fase 2. Analizar el problema
+    // Tengo que calcular el área de un triángulo. Formula: Área del triángulo = (base * altura) / 2.
+    // Para calcular el área del triángulo, necesito la base y la altura.
+
+    // Fase 3. Diseñar el algoritmo
+    // Paso 1. Pedir al usuario que ingrese la medida de la base:
+
+    let base = parseFloat(prompt("Ingrese la medida de la base del triángulo"));
+
+    // Paso 2. Pedir al usuario que ingrese la medida de la altura:
+
+    let altura = parseFloat(prompt("Ingrese la medida de la altura del triángulo"));
+
+    // Paso 3. Necesito otra variable que se va a llamar area.
+
+    let area;
+
+    // Paso 4. Pongo area para que esta variable sea la encargada de calcular el área del triángulo.
+
+    area = (base * altura) / 2;
+
+    // Paso 5. Digo que nos muestre un mensaje en la pantalla y lo concateno con la variable area.
+
+    document.write("El área del triángulo es " + area);
+
+    // Paso 6. Guardo el código y lo pruebo en el escritorio.
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+Metodología para Resolver el Problema:Juan Manuel 
+camina de la fundación 
+Once a la estación de Rocafort en 17 minutos. 
+¿Si la distancia que recorre es 1.553 m cuál es 
+la velocidad de juan Manuel en km? 
+
+Paso 1: Identificar el Problema
+
+Leer cuidadosamente el problema y comprender lo que se está 
+pidiendo.
+Paso 2: Análisis del Problema
+
+Identificar las unidades en las que se presentan los datos 
+(por ejemplo, tiempo en minutos y distancia en metros).
+
+Paso 3: Diseño del Algoritmo
+
+Convertir el tiempo de minutos a horas.
+Convertir la distancia de metros a kilómetros.
+Calcular la velocidad promedio.
+Paso 4: Implementación del Algoritmo
+
+Aplicar las conversiones y cálculos según el diseño del algoritmo.
+Paso 5: Verificación y Prueba
+
+Verificar si el resultado obtenido tiene sentido y cumple con lo 
+esperado.
+Estructura del Algoritmo:
+
+Leer el tiempo en minutos (tiempo_minutos) y la distancia en metros 
+(distancia_metros). 
+Convertir tiempo_minutos a horas: 
+tiempo_horas = tiempo_minutos / 60
+Convertir distancia_metros a kilómetros: 
+distancia_km = distancia_metros / 1000
+Calcular la velocidad en km/h:
+velocidad_km_h = distancia_km / tiempo_horas
+Prueba:
+
+Entrada:
+Tiempo en minutos (tiempo_minutos) = 17
+Distancia en metros (distancia_metros) = 1553
+Salida esperada:
+Velocidad en km/h (velocidad_km_h) = [Resultado Calculado]
+Verificar si coincide con el resultado esperado.
+----------------------------------------------------------------
+
